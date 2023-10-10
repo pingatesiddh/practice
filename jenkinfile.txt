@@ -3,9 +3,9 @@ pipeline {
     parameters {
         string(name: 'bhakti', defaultValue: 'beed chi rani', description: 'tomorrow is bday rani of beed')
 
-        text(name: 'marred', defaultValue: '', description: 'Enter some information about the person')
+        text(name: 'marred', defaultValue: '', description: 'new marred life is strugling')
 
-        booleanParam(name: 'TOGGLE', defaultValue: false, description: 'Toggle this value')
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
 
         choice(name: 'temperament', choices: ['happy', 'sad', 'normal'], description: 'Pick something')
 
