@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+    parameters {
+        string(name: 'bhakti', defaultValue: 'beed chi rani', description: 'tomorrow is bday rani of beed')
+
+        text(name: 'marred', defaultValue: '', description: 'Enter some information about the person')
+
+        booleanParam(name: 'TOGGLE', defaultValue: false, description: 'Toggle this value')
+
+        choice(name: 'temperament', choices: ['happy', 'sad', 'normal'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
+    stages {
+        stage('Example') {
+            steps {
+                echo "Hello ${params.bhakti}"
+
+                echo "Biography: ${params.marred}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.temperament}"
+
+                echo "Password: ${params.PASSWORD}"
+            }
+        }
+    }
+}
