@@ -19,7 +19,6 @@ pipeline {
         stage('Build') {
             steps {
                sh'''
-               yum install git
                mvn clean install
                '''
          }
