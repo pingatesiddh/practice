@@ -26,7 +26,7 @@ pipeline {
           }
        }
 
-          stages('Deploy') {
+          stage('Deploy') {
                 steps {
                 sh'''
                    cp /mnt/gameoflife/gameoflife-web/target/gameoflife.war /mnt/apache-tomcat-9.0.80/webapps/
