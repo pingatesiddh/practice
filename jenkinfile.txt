@@ -12,6 +12,25 @@ pipeline {
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
     stages {
+        stage('Build') {
+            steps {
+               mvn clean install
+         }
+      }
+
+         stage('Test') {
+              steps {
+                 mvn test
+          }
+       }
+
+          stages('Deploy') {
+                steps {
+                sh'''
+                   cp /mnt/gameoflife/gameoflife-web/target/gameoflife.war /mnt/apache-tomcat-9.0.80/webapps/
+                '''
+             }
+         }
         stage('Example') {
             steps {
                 echo "Hello ${params.bhakti}"
