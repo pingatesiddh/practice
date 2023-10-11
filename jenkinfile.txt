@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    enviroment{
+        PATH = "/mnt/apache-maven-3.8.8/bin:$PATH"
+
+    
     parameters {
         string(name: 'bhakti', defaultValue: 'beed chi rani', description: 'tomorrow is bday rani of beed')
 
