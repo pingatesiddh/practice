@@ -10,7 +10,7 @@ pipeline {
         stage('checkout') {
             steps {
 		sh '''
-            git clone https://github.com/Dee601/game-of-life.git
+            git clone https://github.com/pingatesiddh/game-of-life.git
 	   cd game-of-life
 		'''		
             }
